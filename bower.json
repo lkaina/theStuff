@@ -1,0 +1,24 @@
+{
+  "name": "Website",
+  "version": "0.0.0",
+  "authors": [
+    "Leighton Kaina <leighton.kaina@gmail.com>"
+  ],
+  "description": "angular website",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://www.leightonk.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.8",
+    "angular-animate": "~1.2.8",
+    "angular-route": "~1.2.8",
+    "jquery": "~2.0.3"
+  }
+}
