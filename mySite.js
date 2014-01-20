@@ -1,7 +1,9 @@
 $(document).ready(function(){
-  $('.slideMenu').hover(function(event){
-    $('.leftNav').slideDown(300);
-  }, function(event){
-    $('.leftNav').slideUp(300);
+  $('.leftNav ul').hide();
+  $('.leftNav').mouseover(function(event){
+    $('.leftNav ul').slideDown(300);
   });
+  $('.leftNav').mouseleave(function(event){
+    $('.leftNav ul').slideUp(300);
+  })
 });

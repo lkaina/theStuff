@@ -11,24 +11,10 @@ ul {
   border-width: 0 0 2px 0;
 }
 header {
-  position:relative;
+  position: relative;
   font-size: 18px;
   height: 100%;
   background-color:white;
-}
-header h1 {
-  position:absolute;
-  bottom:0;
-  margin-left:50px;
-  float:left;
-  font-style: normal;
-  font-weight: bold;
-  font-family: 'Bubbler One', sans-serif;
-  font-size: 64px;
-}
-header h1:hover {
-  color:#0099ff;
-  cursor:pointer;
 }
 .siteNav, .contact {
   width:40%;
@@ -102,18 +88,23 @@ header a {
   background:url('img/MtFujiTrim2.jpg') no-repeat;
   position:fixed;
 }
-.slideMenu {
+.leftNav {
   margin-left:50px;
   width:200px;
   height:100%;
 }
-.slideMenu:hover {
-  display:block;
+.leftNav:hover {
+  color:#0099ff;
+  cursor:pointer;
 }
-.leftNav {
-  cursor: pointer;
-  width:200px;
-  height:100%;
+.leftNav h1 {
+  position:absolute;
+  top:-52px;
+  float:left;
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Bubbler One', sans-serif;
+  font-size: 64px;
 }
 .leftNav li {
   position:relative;
@@ -157,10 +148,6 @@ header a {
 }
 .hidden {
   display:none;
-}
-.show {
-  display:block;
-
 }
 footer {
   position:fixed;
