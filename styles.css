@@ -1,4 +1,6 @@
-body {
+html, body {
+  width:100%;
+  height:100%;
   font: italic small-caps normal 36px/150% Arial, Helvetica, sans-serif;
 }
 ul {
@@ -6,127 +8,71 @@ ul {
 }
 .topPanel {
   width:100%;
-  height:100px;
-  border-bottom: solid black;
-  border-width: 0 0 2px 0;
+  height:10%;
 }
-header {
-  position: relative;
-  font-size: 18px;
-  height: 100%;
-  background-color:white;
-}
-.siteNav, .contact {
-  width:40%;
+/*LEFT NAVIGATION MENU*/
+/**********************/
+/**********************/
+.leftHead {
+  position:relative;
+  width:50%;
   height:100%;
-}
-.siteNav li {
-  margin-right:10px;
-}
-.contact {
-  float: right;
-  padding-right: 10px;
-}
-header a {
-  text-indent:-9999px;
-  margin-left: 20px;
-  float: right;
-}
-.contact a {
-  margin-top: 40px;
-  background:url('img/sprite3.png') no-repeat;
-}
-#linkedIn, #ghub, #emailLink, #fbLink {
-  height:32px;
-  width:32px;
-}
-/* Contact Icons */
-#ghub {
-  margin-right:20px;
-  background-position: 0 0;
-}
-#ghub:hover {
-  background-position: -32px 0px;
-}
-#ghub:active {
-  background-position: -64px 0px;
-}
-#linkedIn {
-  background-position: 0 -32px;
-}
-#linkedIn:hover {
-  background-position: -32px -32px;
-}
-#linkedIn:active {
-  background-position: -64px -32px;
-}
-#fbLink {
-  background-position: 0 -64px;
-}
-#fbLink:hover {
-  background-position: -32px -64px;
-}
-#fbLink:active {
-  background-position: -64px -64px;
-}
-#emailLink {
-  background-position: 0 -96px;
-}
-#emailLink:hover {
-  background-position: -32px -96px;
-}
-#emailLink:active {
-  background-position: -64px -96px;
-}
-.container {
-  position: relative;
-  clear:both;
-  width:100%;
-  height:341px;
-  border-bottom: solid black;
-  border-width: 0 0 2px 0;
-  background:url('img/MtFujiTrim2.jpg') no-repeat;
-  position:fixed;
-}
-.leftNav {
-  margin-left:50px;
-  width:200px;
-  height:100%;
-}
-.leftNav:hover {
-  color:#0099ff;
-  cursor:pointer;
-}
-.leftNav h1 {
-  position:absolute;
-  top:-52px;
   float:left;
+}
+.leftHead h1 {
+  position:absolute;
+  float:left;
+  margin-left:50px;
+  position:absolute;
+  bottom:0;
+  font-size:64px;
+  font-family: 'Bubbler One', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-family: 'Bubbler One', sans-serif;
-  font-size: 64px;
+}
+.leftHead h1:hover {
+  cursor: pointer;
+  color: rgb(0, 153, 255);
+}
+.leftNav {
+  position:absolute;
+  top:100%;
+  float:left;
+  width: 200px;
+  margin-left:50px;
 }
 .leftNav li {
-  position:relative;
-  width:100%;
-  font-size:24px;
-  border:1px solid white;
+  height: 45px;
+  width: 200px;
+  vertical-align: middle;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  display: block;
 }
 .leftNav li:hover {
-  transition-property: width, border-radius;
+  cursor: pointer;
+  transition-property: width, border-radius, padding-left, text-shadow;
   transition-duration: 0.2s;
   transition-timing-function: ease-out;
+  width: 210px;
   border-radius: 0 10px 10px 0;
-  width: 110%;
+  padding-left: 20px;
+  text-shadow: 1px 1px 2px black;
 }
-.leftNav a {
-  margin:0;
-  padding-left: 10px;
-  color: white;
-  text-decoration: none;
-  width:100%;
+.leftNav li a {
+  position:relative;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left:10px;
+  font-size: 20px;
   height:100%;
-  display:block;
+  width:100%;
+  text-decoration: none;
+  color: white;
+}
+.leftNav li a:active {
+  color: yellow;
 }
 .leftNav li:nth-child(odd) {
   background:rgba(0, 153, 255, 0.4);
@@ -146,22 +92,86 @@ header a {
 .leftNav li:nth-child(even):active {
   background:rgba(25, 25, 25, 1.0);
 }
-.hidden {
-  display:none;
+/**********************/
+/**********************/
+/**********************/
+
+.rightHead {
+  position:relative;
+  width:50%;
+  height:100%;
+  float:right;
 }
-footer {
-  position:fixed;
-  background-color:gray;
+.contact {
+  position:absolute;
+  width:100%;
+  top:50%;
 }
-/*#ghub {
+.contact a {
+  float:right;
+  height:32px;
+  width:32px;
   margin-right:20px;
-  background:url('img/') no-repeat;
+  text-indent:-9999px;
+  background:url('img/sprite3.png') no-repeat;
 }
-#linkedIn {
-  background:url('img/linkedin.png') no-repeat;
+#ghubLogo {
+  background-position: 0 0;
 }
-#fbLink {
-  background:url('img/facebook3.png') no-repeat;
+#ghubLogo:hover {
+  background-position: -32px 0px;
 }
-#emailLink {
-  */
+#ghubLogo:active {
+  background-position: -64px 0px;
+}
+#linkedInLogo {
+  background-position: 0 -32px;
+}
+#linkedInLogo:hover {
+  background-position: -32px -32px;
+}
+#linkedInLogo:active {
+  background-position: -64px -32px;
+}
+#fbLogo {
+  background-position: 0 -64px;
+}
+#fbLogo:hover {
+  background-position: -32px -64px;
+}
+#fbLogo:active {
+  background-position: -64px -64px;
+}
+#emailLogo {
+  margin-right:50px;
+  background-position: 0 -96px;
+}
+#emailLogo:hover {
+  background-position: -32px -96px;
+}
+#emailLogo:active {
+  background-position: -64px -96px;
+}
+
+main {
+  clear:both;
+  width:100%;
+  height:70%;
+  border-top: 1px solid black;
+  background:url('img/MtFujiTrim2.jpg') no-repeat;
+}
+
+/*main:hover {
+  transition-property: background-position;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  background-position: 1440px 0px;
+}*/
+
+.bottomPanel {
+  position:fixed;
+  width:100%;
+  height:15%;
+  bottom:0px;
+  border-top: 1px solid black;
+}
