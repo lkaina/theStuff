@@ -1,5 +1,8 @@
 $(document).ready(function(){
+  //hide all invisible items
   $('.leftNav').hide();
+  $('#bio').hide();
+
   $('.leftHead nav').mouseover(function(event){
     $('.leftNav').stop(true, true).slideDown(300);
     $('.leftHead h1').css('color', 'rgb(0, 153, 255)');
@@ -8,9 +11,12 @@ $(document).ready(function(){
     $('.leftNav').stop(true, true).slideUp(300);
     $('.leftHead h1').css('color', 'black');
   });
-  $('#bio').on('click', function(event){
-    event.preventDefault() && event.stopPropagation();
-    
+  $('#bioLink').on('click', function(event){
+
+    $('#bio').show();
+    $('#home').hide();
+    // event.preventDefault() && event.stopPropagation();
+
   });
 
   // $('main').hover(function(event){
