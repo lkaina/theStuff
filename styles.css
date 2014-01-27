@@ -1,4 +1,6 @@
 html, body {
+  min-width:1024px;
+  min-height:520px;
   width:100%;
   height:100%;
   font: italic small-caps normal 36px/150% Arial, Helvetica, sans-serif;
@@ -6,11 +8,40 @@ html, body {
 ul {
   list-style-type: none;
 }
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('fonts/icomoon.eot');
+  src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff') format('woff'),
+    url('fonts/icomoon.ttf') format('truetype'),
+    url('fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .topPanel {
-  position:fixed;
+  position:relative;
+  min-height:78px;
+  min-width:1024px;
+  background-color:white;
   width:100%;
-  height:10%;
+  height:15%;
   z-index:10;
+  border-bottom: 1px solid black;
 }
 /**********************/
 /*LEFT NAVIGATION MENU*/
@@ -19,15 +50,16 @@ ul {
   position:relative;
   width:50%;
   height:100%;
+  min-width:512px;
   float:left;
 }
 .leftHead h1 {
   position:absolute;
   float:left;
-  margin-left:50px;
+  margin-left:5%;
   position:absolute;
   bottom:0;
-  font-size:64px;
+  font-size:2em;
   font-family: 'Bubbler One', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -40,12 +72,12 @@ ul {
   position:absolute;
   top:100%;
   float:left;
-  width: 200px;
-  margin-left:50px;
+  width: 75%;
+  margin-left:5%;
 }
 .leftNav li {
-  height: 45px;
-  width: 200px;
+  height: 25%;
+  width: 40%;
   vertical-align: middle;
   border-left: 1px solid black;
   border-right: 1px solid black;
@@ -57,25 +89,23 @@ ul {
   transition-property: width, border-radius, padding-left, text-shadow;
   transition-duration: 0.2s;
   transition-timing-function: ease-out;
-  width: 210px;
+  width: 42%;
   border-radius: 0 10px 10px 0;
-  padding-left: 20px;
+  padding-left: 5%;
   text-shadow: 1px 1px 2px black;
 }
-.leftNav li a {
+.leftNav li span {
   position:relative;
   margin-top: auto;
   margin-bottom: auto;
-  padding-left:10px;
-  font-size: 20px;
-  height:100%;
-  width:100%;
+  padding-left:5%;
+  font-size: 0.6em;
   text-decoration: none;
   color: white;
   display:block;
   outline:none;
 }
-.leftNav li a:active {
+.leftNav li span:active {
   color: #DAD4D4;
 }
 .leftNav li:nth-child(odd) {
@@ -103,20 +133,38 @@ ul {
 .rightHead {
   position:relative;
   width:50%;
+  min-width:512px;
   height:100%;
   float:right;
+}
+.rightHead nav {
+  height: 100%;
+  width: 100%;
 }
 .contact {
   position:absolute;
   width:100%;
-  top:50%;
+  top:40%;
+  min-width:512px;
 }
 .contact a {
+  font-size: 1em;
+  text-decoration:none;
   float:right;
-  height:32px;
-  width:32px;
-  margin-right:20px;
-  text-indent:-9999px;
+  margin-right:3%;
+  color:black;
+}
+.contact a:hover {
+  color:rgb(0, 153, 255);
+}
+.contact a:active {
+  color:rgb(0, 200, 255);
+}
+#emailLogo {
+  margin-right:6%;
+}
+/*
+  /*text-indent:-9999px;
   background:url('img/sprite3.png') no-repeat;
 }
 #ghubLogo {
@@ -147,7 +195,7 @@ ul {
   background-position: -64px -64px;
 }
 #emailLogo {
-  margin-right:50px;
+  margin-right:5%;
   background-position: 0 -96px;
 }
 #emailLogo:hover {
@@ -156,24 +204,26 @@ ul {
 #emailLogo:active {
   background-position: -64px -96px;
 }
-
+*/
 /**********************/
 /******MAIN PANEL******/
 /**********************/
 
 main {
   position:relative;
-  z-index:-9999;
-  top: 10%;
+  z-index:1;
+  top:0;
   clear:both;
-  height:600px;
+  height:75%;
+  min-height:390px;
+  min-width:1024px;
+  max-height:600px;
   width:100%;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  overflow:auto;
+  border-bottom:1px solid black;
+  overflow:hidden;
 }
 #home, #bio, #projects, #resume, #interests {
-  z-index:-2;
+  z-index:2;
   position:absolute;
   float:left;
   top:0;
@@ -181,7 +231,7 @@ main {
   height:100%;
 }
 #home {
-  z-index:-1;
+  z-index:3;
   left:0;
   background:url('img/MtFujiTrim4.jpg') no-repeat;
 }
@@ -191,13 +241,16 @@ main {
 }
 .bioPic, .bioInfo {
   position: relative;
-  width:50%;
   height:100%;
 }
 .bioPic {
+  min-width:500px;
+  width:40%;
   float:left;
 }
 .bioPic img {
+  width:;
+  height:35%;
   position: absolute;
   margin: auto;
   top:15%;
@@ -205,13 +258,20 @@ main {
 }
 .vBar {
   position:absolute;
-  right:25%;
+  right:0;
   height:100%;
   width:40px;
   background-color: rgba(0, 153, 255, 0.4);
 }
 .bioInfo {
+  min-width:600px;
+  width:60%;
   float:right;
+}
+.bioInfo p {
+  margin: 50px 60px 50px 60px;
+  font: normal bold 16px/28px 'Stint Ultra Expanded', cursive;
+  text-align:justify;
 }
 
 #projects {
@@ -237,7 +297,11 @@ main {
 /********FOOTER********/
 /**********************/
 .bottomPanel {
-  position:fixed;
+  position:absolute;
+  bottom:0;
   z-index: 10;
   width:100%;
+  min-height: 52px;
+  background-color:white;
+  overflow: auto;
 }

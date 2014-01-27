@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
     <link href='http://fonts.googleapis.com/css?family=Bubbler+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded' rel='stylesheet' type='text/css'>
     <link rel='shortcut icon' href="img/favicon.ico" />
     <script src='bower_components/jquery/jquery.min.js'></script>
     <title>Leighton Kaina</title>
@@ -14,20 +15,21 @@
         <nav>
           <h1>Leighton Kaina</h1>
           <ul class='leftNav'>
-            <li><a href='#' id='bioLink'>Bio</a></li>
-            <li><a href='#' id='projectsLink'>Projects</a></li>
-            <li><a href='#' id='resumeLink'>Resume</a></li>
-            <li><a href='#' id='interestsLink'>Interests</a></li>
+            <li><span id='bioLink'>Bio</span></li>
+            <li><span id='projectsLink'>Projects</span></li>
+            <li><span id='resumeLink'>Resume</span></li>
+            <li><span id='interestsLink'>Interests</span></li>
           </ul>
         </nav>
       </div>
       <div class='rightHead'>
         <nav>
           <ul class='contact'>
-            <li><a href='mailto:leighton.kaina@gmail.com' id='emailLogo'>Email</a></li>
-            <li><a href='https://www.facebook.com/lkaina' id='fbLogo'>Facebook</a></li>
-            <li><a href='http://www.linkedin.com/in/lkaina' id='linkedInLogo'>LinkedIn</a></li>
-            <li><a href='https://github.com/lkaina' id='ghubLogo'>Github</a></li>
+            <li><a data-icon="&#xe600;" href='mailto:leighton.kaina@gmail.com' id='emailLogo'></a></li>
+            <li><a data-icon="&#xe603;" href='https://www.facebook.com/lkaina' id='fbLogo'></a></li>
+            <li><a data-icon="&#xe604;" href='http://www.linkedin.com/in/lkaina' id='linkedInLogo'></a></li>
+            <li><a data-icon="&#xe605;" href='https://github.com/lkaina' id='ghubLogo'></a></li>
+            <li><a data-icon="&#xe601;" href="https://plus.google.com/112568088695861689732? rel=author" id='googleLogo'></a></li>
           </ul>
         </nav>
       </div>
@@ -36,12 +38,13 @@
       <div id='home'>
       </div>
       <div id='bio'>
-        <section class='bioPic'>
+        <section class='bioPic' name='#bio'>
           <img src='img/bioPic.png' />
           <div class='vBar'>
           </div>
         </section>
         <section class='bioInfo'>
+          <p>I'm a software engineer in the SF Bay Area that enjoys dabbling in different technologies.  While most of my experience has been in front-end work, I've also dipped my foot in mobile development with native iOS and <a href="http://phonegap.com/" id='phonegap' target='_blank'>PhoneGap</a>
         </section>
       </div>
       <div id='projects'>
