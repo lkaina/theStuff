@@ -214,6 +214,111 @@ $(document).ready(function(){
       'left': '0'
     });
   });
+  $('.leftTab, .donator').on('mouseover', function(event){
+    $('.phonetag, .rightTab').css({
+      // 'transition-property': 'z-index',
+      // 'transition-duration': '3.0s',
+      // 'transition-timing-function': 'ease-out',
+      'z-index': '1'
+    });
+    $('.donator').css({
+      // 'transition-property': 'top, z-index',
+      'transition-property': 'top',
+      'transition-duration': '3.0s',
+      'transition-timing-function': 'ease-out',
+      'top': '-47%',
+      'z-index': '2'
+    });
+    $('.leftTab').css({
+      // 'transition-property': 'top, z-index',
+      'transition-property': 'top',
+      'transition-duration': '3.0s',
+      'transition-timing-function': 'ease-out',
+      'top': '53%',
+      'z-index': '2'
+    });
+  });
+  $('.leftTab, .donator').on('mouseleave', function(event){
+    $('.donator').css({
+      'transition-property': 'top',
+      'transition-duration': '3.0s',
+      'transition-timing-function': 'ease-out',
+      'top': '-53%'
+    });
+    $('.leftTab').css({
+      // 'transition-property': 'top, z-index',
+      'transition-property': 'top',
+      'transition-duration': '3.0s',
+      'transition-timing-function': 'ease-out',
+      'top': '47%'
+    });
+  });
+  $('.leftTab').on('click', function(event){
+    $('.donator').css({
+      'transition-property': 'top',
+      'transition-duration': '3.0s',
+      'transition-timing-function': 'ease-out',
+      'top': '0'
+    });
+    $('.leftTab').css({
+      'transition-property': 'top',
+      'transition-duration': '3.0s',
+      'transition-timing-function': 'ease-out',
+      'top': '100%'
+    });
+  });
+  $('.rightTab, .phonetag').on('mouseover', function(event){
+    $('.donator, .leftTab').css({
+      // 'transition-property': 'z-index',
+      // 'transition-duration': '3.0s',
+      // 'transition-timing-function': 'ease-out',
+      'z-index': '1'
+    });
+    $('.phonetag').css({
+      // 'transition-property': 'bottom, z-index',
+      'transition-property': 'bottom',
+      'transition-duration': '3.0s',
+      'transition-timing-function': 'ease-out',
+      'bottom': '-47%',
+      'z-index': '2'
+    });
+    $('.rightTab').css({
+      // 'transition-property': 'top, z-index',
+      'transition-property': 'top',
+      'transition-duration': '3.0s',
+      'transition-timing-function': 'ease-out',
+      'top': '41%',
+      'z-index': '2'
+    });
+  });
+  $('.rightTab, .phonetag').on('mouseleave', function(event){
+    $('.phonetag').css({
+      'transition-property': 'bottom',
+      'transition-duration': '3.0s',
+      'transition-timing-function': 'ease-out',
+      'bottom': '-53%'
+    });
+    $('.rightTab').css({
+      'transition-property': 'top, z-index',
+      'transition-duration': '3.0s',
+      'transition-timing-function': 'ease-out',
+      'top': '47%'
+    });
+  });
+  $('.rightTab').on('click', function(event){
+    $('.phonetag').css({
+      'transition-property': 'bottom',
+      'transition-duration': '3.0s',
+      'transition-timing-function': 'ease-out',
+      'bottom': '0'
+    });
+    $('.rightTab').css({
+      'transition-property': 'top',
+      'transition-duration': '3.0s',
+      'transition-timing-function': 'ease-out',
+      'top': '-6%'
+    });
+  });
   //interests page
     // event.preventDefault() && event.stopPropagation();
 
