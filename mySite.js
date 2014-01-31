@@ -215,19 +215,13 @@ $(document).ready(function(){
     });
   });
   $('.leftTab, .donator').on('mouseover', function(event){
-    $('.phonetag, .rightTab').css({
-      // 'transition-property': 'z-index',
-      // 'transition-duration': '0.3s',
-      // 'transition-timing-function': 'ease-out',
-      'z-index': '1'
-    });
     $('.donator').css({
       // 'transition-property': 'top, z-index',
       'transition-property': 'top',
       'transition-duration': '0.3s',
       'transition-timing-function': 'ease-out',
       'top': '-47%',
-      'z-index': '3'
+      'z-index': '4'
     });
     $('.leftTab').css({
       // 'transition-property': 'top, z-index',
@@ -235,7 +229,19 @@ $(document).ready(function(){
       'transition-duration': '0.3s',
       'transition-timing-function': 'ease-out',
       'top': '53%',
-      'z-index': '4'
+      'z-index': '5'
+    });
+    $('.phonetag').css({
+      // 'transition-property': 'z-index',
+      // 'transition-duration': '0.3s',
+      // 'transition-timing-function': 'ease-out',
+      'z-index': '1'
+    });
+    $('.rightTab').css({
+      // 'transition-property': 'z-index',
+      // 'transition-duration': '0.3s',
+      // 'transition-timing-function': 'ease-out',
+      'z-index': '2'
     });
   });
   $('.leftTab, .donator').on('mouseleave', function(event){
@@ -253,18 +259,18 @@ $(document).ready(function(){
       'top': '47%'
     });
   });
-  $('.leftTab').on('click', function(event){
+  $('.leftTab, .donator').on('click', function(event){
     $('.donator').css({
       'transition-property': 'top',
       'transition-duration': '0.3s',
       'transition-timing-function': 'ease-out',
-      'top': '0'
+      'top': '-6%'
     });
     $('.leftTab').css({
       'transition-property': 'top',
       'transition-duration': '0.3s',
       'transition-timing-function': 'ease-out',
-      'top': '100%'
+      'top': '94%%'
     });
   });
   $('.rightTab, .phonetag').on('mouseover', function(event){
@@ -288,7 +294,7 @@ $(document).ready(function(){
       'transition-duration': '0.3s',
       'transition-timing-function': 'ease-out',
       'top': '41%',
-      'z-index': '2'
+      'z-index': '3'
     });
   });
   $('.rightTab, .phonetag').on('mouseleave', function(event){
@@ -305,18 +311,18 @@ $(document).ready(function(){
       'top': '47%'
     });
   });
-  $('.rightTab').on('click', function(event){
+  $('.rightTab, .phonetag').on('click', function(event){
     $('.phonetag').css({
       'transition-property': 'bottom',
       'transition-duration': '0.3s',
       'transition-timing-function': 'ease-out',
-      'bottom': '0'
+      'bottom': '-6%'
     });
     $('.rightTab').css({
       'transition-property': 'top',
       'transition-duration': '0.3s',
       'transition-timing-function': 'ease-out',
-      'top': '-6%'
+      'top': '0'
     });
   });
   //interests page
