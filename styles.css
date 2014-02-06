@@ -3,6 +3,8 @@ html, body {
   min-height:520px;
   width:100%;
   height:100%;
+}
+body {
   font: italic small-caps normal 36px/150% Arial, Helvetica, sans-serif;
 }
 /*
@@ -364,31 +366,21 @@ main {
   bottom:-53%;
   -webkit-box-shadow: 0 0 0 4px white, 0 -8px 4px rgba(0, 0, 0, 0.6);
 }
-.hiddenInfo, .visibleInfo {
-  width:100%;
-}
-.hiddenInfo {
-  height:53%;
-}
-.visibleInfo {
-  height:47%;
-}
-.donator .tech {
-  right:5%;
-}
-.donator .projInfo {
-}
 .donator h1 {
   position:relative;
-  font-size: 72px;
+  font-size: 2em;
 }
-.donator p {
+.projInfo p {
   position:relative;
   margin-top: 10px;
   font: small-caps italic .5em 'Arial', cursive;
 }
-.projInfo {
+.tech p {
+  font-size: .4em;
+}
+.donator .projInfo {
   position:absolute;
+  width:50%;
   bottom:15%;
   left:5%;
   border-left: 10px solid rgba(0, 153, 255, 1);
@@ -396,10 +388,10 @@ main {
   padding: 0 0 2px 2px;
 
 }
-.tech {
+.donator .tech {
   position:absolute;
   width:45%;
-  padding: 2%;
+  padding: 1%;
   border-left: 30px solid rgb(0, 153, 255);
   /*border-top: 15px solid rgb(153, 255, 0);*/
   /*background-color:rgba(100, 100, 100, 0.1);*/
@@ -407,30 +399,96 @@ main {
   left:-30%;
   line-height:.6em;
 }
-.tech h2 {
-  font-size: .6em;
+.donator .tech h2 {
+  font-size: .5em;
   line-height:.7em;
 }
-.tech li {
+.donator .tech li {
   font-size: .4em;
   list-style-type: disc;
   list-style-position: inside;
   display:inline-block;
 }
-.screenShots {
+.donator .screenShots {
   position:absolute;
   right: 15%;
   bottom: 12%;
 }
-.screenShots img {
+.donator .screenShots img {
   position:relative;
   width: 60px;
 }
-.screenShots img:first-child {
+.donator .screenShots img:first-child {
   z-index:10;
   -webkit-transform: rotate(-10deg);
 }
-.screenShots img:nth-child(even) {
+.donator .screenShots img:nth-child(even) {
+  z-index:9;
+  -webkit-transform: rotate(10deg);
+}
+.phonetag h1 {
+  text-align:right;
+  position:relative;
+  font-size: 2em;
+}
+/*.phonetag p {
+  text-align:right;
+  position:relative;
+  margin-top: 10px;
+  font: small-caps italic .4em 'Arial', cursive;
+}*/
+.phonetag .projInfo {
+
+  width:50%;
+  position:absolute;
+  top:15%;
+  right:5%;
+  border-right: 10px solid rgba(0, 153, 255, 1);
+  border-bottom: 4px solid rgba(153, 255, 0, 1);
+  padding: 2px 2px 0 0;
+  text-align:right;
+
+}
+.phonetag .tech {
+  position:absolute;
+  width:45%;
+  padding-right: 2%;
+  border-right: 30px solid rgb(0, 153, 255);
+  /*border-top: 15px solid rgb(153, 255, 0);*/
+  /*background-color:rgba(100, 100, 100, 0.1);*/
+  bottom:15%;
+  right:-55%;
+  line-height:.6em;
+  text-align:right;
+}
+.phonetag .tech h2 {
+  font-size: .5em;
+  line-height:.7em;
+}
+.phonetag .tech li {
+  font-size: .4em;
+  list-style-type: disc;
+  list-style-position: inside;
+  display:inline-block;
+}
+.tech a {
+  text-decoration: none;
+  font-weight:bold;
+}
+.phonetag .screenShots {
+  position:absolute;
+  left: 15%;
+  top: 12%;
+}
+.phonetag .screenShots img {
+  position:relative;
+  width: 60px;
+}
+.phonetag .screenShots img:first-child {
+  z-index:10;
+  -webkit-transform: rotate(-10deg);
+}
+.phonetag .screenShots img:nth-child(even) {
   z-index:9;
   -webkit-transform: rotate(10deg);
 }
@@ -440,6 +498,7 @@ main {
 #resume {
   z-index:100;
   left:300%;
+  background:white;
   overflow-y:auto;
 }
 #resume h1 {
@@ -465,7 +524,7 @@ main {
   height:10%;
   width:100%;
   min-height: 52px;
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
   overflow: auto;
   border-top: 1px solid black;
 }
