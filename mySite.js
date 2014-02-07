@@ -2,26 +2,31 @@ $(document).ready(function(){
   //scale text by window size
   var $body = $('body'); //Cache this for performance
 
-  // var setBodyScale = function() {
-  //   var scaleSource = $body.width(),
-  //     scaleFactor = 0.35,
-  //     maxScale = 600,
-  //     minScale = 30; //Tweak these values to taste
+  var windowScale = function() {
+    var setWidth = 1440;
+    var minWidth = 1024;
+    var initFontSize = 36;
 
-  //   var fontSize = scaleSource * scaleFactor; //Multiply the width of the body by the scaling factor:
+    var maxWidth = window.screen.width;
+    var currWidth = window.innerWidth;
+    var scaleFontSize;
 
-  //   if (fontSize > maxScale) fontSize = maxScale;
-  //   if (fontSize < minScale) fontSize = minScale; //Enforce the minimum and maximums
+    if (currWidth < minWidth) {
+      scaleFontSize = initFontSize * (minWidth / setWidth);
+    } else if (currWidth >= setWidth) {
+      scaleFontSize = initFontSize;
+    } else {
+      scaleFontSize = initFontSize * (currWidth / setWidth);
+    } 
+    $('body').css('font', 'italic small-caps normal '+scaleFontSize+'px/150% Arial, Helvetica, sans-serif');
+  }
 
-  //   $('body').css('font', 'italic small-caps normal '+fontSize+'px/150% Arial, Helvetica, sans-serif');
-  // }
-
-  // $(window).resize(function(){
-  //     setBodyScale();
-  // });
-
+  $(window).resize(function(){
+      windowScale();
+  });
   //Fire it when the page first loads:
-  // setBodyScale();
+  windowScale();
+
   //hide all invisible items
   $('.leftNav').hide();
   $('.leftHead nav').on('mouseover', function(event){
@@ -310,7 +315,7 @@ $(document).ready(function(){
         'transition-property': 'width',
         'transition-duration': '0.3s',
         'transition-timing-function': 'ease-out',
-        'width': '150px'
+        'width': '25%'
       });
       $('.donator .tech').css({
         'transition-property': 'left',
@@ -335,7 +340,7 @@ $(document).ready(function(){
         'transition-property': 'width',
         'transition-duration': '0.3s',
         'transition-timing-function': 'ease-out',
-        'width': '60px'
+        'width': '12%'
       });
       $('.donator .tech').css({
         'transition-property': 'left',
@@ -406,11 +411,17 @@ $(document).ready(function(){
         'transition-timing-function': 'ease-out',
         'top': '0'
       });
+      $('.phonetag .screenShots').css({
+       'transition-property': 'left',
+        'transition-duration': '0.3s',
+        'transition-timing-function': 'ease-out',
+        'left': '12%'
+      });
        $('.phonetag .screenShots img').css({
         'transition-property': 'width',
         'transition-duration': '0.3s',
         'transition-timing-function': 'ease-out',
-        'width': '150px'
+        'width': '25%',
       });
       $('.phonetag .tech').css({
         'transition-property': 'right',
@@ -431,11 +442,17 @@ $(document).ready(function(){
         'transition-timing-function': 'ease-out',
         'top': '47%'
       });
+      $('.phonetag .screenShots').css({
+       'transition-property': 'left',
+        'transition-duration': '0.3s',
+        'transition-timing-function': 'ease-out',
+        'left': '20%'
+      });
       $('.phonetag .screenShots img').css({
         'transition-property': 'width',
         'transition-duration': '0.3s',
         'transition-timing-function': 'ease-out',
-        'width': '60px'
+        'width': '12%',
       });
       $('.phonetag .tech').css({
         'transition-property': 'right',
