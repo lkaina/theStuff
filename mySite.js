@@ -464,7 +464,20 @@ $(document).ready(function(){
     pSlide = !pSlide;
   });
   //interests page
-    // event.preventDefault() && event.stopPropagation();
+$('video').on('mouseover', function(event) {
+  event.preventDefault() && event.stopPropagation();
+  $('video').get(0).play();
+  $('video').css({
+    '-webkit-transform': 'rotate(0deg)'
+  });
+});
+$('video').on('mouseleave', function(event) {
+  event.preventDefault() && event.stopPropagation();
+  $('video').get(0).pause();
+  $('video').css({
+    '-webkit-transform': 'rotate(-10deg)'
+  });
+});
 
   // $('main').hover(function(event){
   //   $(this).css({
