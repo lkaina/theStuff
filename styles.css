@@ -455,12 +455,15 @@ main {
 #interests {
   left:400%;
 }
-video {
-  -webkit-transform: rotate(-10deg);
+#interests * {
+  position:absolute;
   box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.6);
   border: 1px solid black;
   padding: 10px 5px 40px 5px;
   width: 160px;
+  background: white;
+}
+#interests:nth-child(even) {
 }
 /**********************/
 /********FOOTER********/
