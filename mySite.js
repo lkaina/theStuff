@@ -33,6 +33,8 @@ $(document).ready(function(){
         'top': Math.ceil(Math.random()*60 + 20) + '%',
         'left': Math.ceil(Math.random()*60 + 20) + '%',
         'webkit-transform': 'rotate(' + Math.ceil(Math.random()*360) + 'deg)',
+        'moz-transform': 'rotate(' + Math.ceil(Math.random()*360) + 'deg)',
+        'transform': 'rotate(' + Math.ceil(Math.random()*360) + 'deg)',
         'z-index': Math.ceil(Math.random()*10 + 20)
       });
     });
@@ -455,10 +457,11 @@ $('#interests').children().on('mouseover', function(event) {
     $(this).get(0).play();
   }
   $(this).css({
-    'transiton-property': '-webkit-transform, z-index, top, left',
+    'transiton-property': '-webkit-transform, -moz-transform, z-index',
     'transition-duration': '0.3s',
     'transition-timing-function': 'ease-out',
     '-webkit-transform': 'rotate(0deg) scale(1.5)',
+    '-moz-transform': 'rotate(0deg) scale(1.5)',
     'z-index': '35'
   });
   $(this).on('mouseleave', function(event) {
@@ -467,7 +470,11 @@ $('#interests').children().on('mouseover', function(event) {
       $(this).get(0).pause();
     }
     $(this).css({
-      '-webkit-transform': rotation,
+      'transiton-property': '-webkit-transform, -moz-transform, z-index',
+      'transition-duration': '0.3s',
+      'transition-timing-function': 'ease-out',
+      '-webkit-transform': rotation+' scale(1)',
+      '-moz-transform': rotation+' scale(1)',
       'z-index': '30'
     });
   });
