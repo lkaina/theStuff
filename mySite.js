@@ -451,13 +451,14 @@ $(document).ready(function(){
   //interests page
 $('#interests').children().on('mouseover', function(event) {
   event.preventDefault() && event.stopPropagation();
-  var rotation = $(this).css('webkit-transform');
+  var rotation = $(this).css('-webkit-transform');
+  var mozRotation = $(this).css('-moz-transform');
   var zIndex = $(this).css('z-index');
   if ($(this).prop('tagName') === 'VIDEO') {
     $(this).get(0).play();
   }
   $(this).css({
-    'transiton-property': '-webkit-transform, -moz-transform, z-index',
+    'transiton-property': '-webkit-transform, -moz-transform, z-index, top, left',
     'transition-duration': '0.3s',
     'transition-timing-function': 'ease-out',
     '-webkit-transform': 'rotate(0deg) scale(1.5)',
@@ -470,11 +471,8 @@ $('#interests').children().on('mouseover', function(event) {
       $(this).get(0).pause();
     }
     $(this).css({
-      'transiton-property': '-webkit-transform, -moz-transform, z-index',
-      'transition-duration': '0.3s',
-      'transition-timing-function': 'ease-out',
-      '-webkit-transform': rotation+' scale(1)',
-      '-moz-transform': rotation+' scale(1)',
+      '-webkit-transform': rotation,
+      '-moz-transform': mozRotation,
       'z-index': '30'
     });
   });

@@ -468,6 +468,7 @@ main {
 /**********************/
 #interests {
   left:400%;
+  background: url('img/bulletinbg.jpg')repeat;
 }
 #interests * {
   position:absolute;
